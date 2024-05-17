@@ -152,7 +152,7 @@ end
 
 Rake::Task.tasks.each do |t|
   t.enhance do
-    puts 'Closing browser'
+    puts 'Closing browser' if @browser
     @browser&.close
   end
 end
